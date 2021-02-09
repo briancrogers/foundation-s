@@ -12,7 +12,7 @@ switch ($searchType) {
 $searchValue = $this->escapeHtml($this->params()->fromQuery('fulltext_search', ''));
 ?>
 
-<?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(array('locale_as_code' => true)); ?>
+<?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(array('locale_as_pill' => true)); ?>
 <form action="<?php echo $this->escapeHtml($searchAction); ?>" id="search-form" class="input-group">
     <input type="text" name="fulltext_search" value="<?php echo $searchValue; ?>"
         placeholder="<?php echo $translate('Search'); ?>"

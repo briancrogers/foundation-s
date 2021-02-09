@@ -1,0 +1,28 @@
+ul.language-switcher.locale-pill .flag-icon.active {
+  box-shadow: none;
+}
+
+ul.language-switcher.locale-pill li {
+  margin: 2px 0px 2px 0px;
+}
+
+ul.language-switcher.locale-pill {
+  margin-left: 0;
+}
+
+ul.language-switcher.locale-pill .flag-icon {
+  border: none;
+  line-height: unset;
+  width: 4em;
+}
+
+@mixin flag-icon($country, $locale) {
+  .flag-icon-#{$locale} {
+    background-image: url("../img/8x3/#{$country}.svg") !important;
+  }
+}
+
+@include flag-icon(cy, cy);
+@include flag-icon(cy_on, cy-active);
+@include flag-icon(en, en);
+@include flag-icon(en_on, en-active);
